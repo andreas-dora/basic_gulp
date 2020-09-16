@@ -1,0 +1,16 @@
+$white: #ffffff;
+$ghost:#f8f8ff;
+$dark-red: #6a0202;
+$light-gray: #A7A7A7;
+$gray: #E8E9EB;
+$dark-gray: #606060;
+$accent: #03AFC2;
+$dark-blue: #223843;
+
+@function set-text-color($c-bg){
+  @if(lightness($c-bg) > 50){
+    @return #000; 
+  } @else {
+    @return #f8f8ff;
+  }
+}

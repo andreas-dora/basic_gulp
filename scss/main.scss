@@ -1,6 +1,87 @@
-body {
-  background-color: firebrick;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+@import 'modules/all';
+// @import 'vendor/normalize';
+// @import 'parts/all';
 
+$container: 960px;
+$main-font: $ff-sans;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 1px solid lightseagreen;
+}
+
+body {
+  background-color: $ghost;
+  color: black;
+//@at-root: $main-font;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+
+.container{
+  max-width: $container;
+  margin: auto;
+  padding: 0 20px;
+}
+
+a{
+  text-decoration: none;
+}
+header{
+  background-color: $dark-red;
+  color: $ghost;
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+  font-size: 3rem;
+  padding-left: 16px;
+  // text-transform: uppercase;
+  
+}
+nav {
+  // height: 40px;
+  background-color: $dark-red;
+  margin-bottom: 4vh;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  li{
+    // display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  a{
+    display: inline-block;
+    font-weight: bold;
+    color: $ghost;
+    padding: 12px 16px 16px 16px;
+    &:hover{
+      color:$dark-red;
+      background-color: $ghost;
+    }
+  }
+}
+
+.section-Header{
+  font-size: 2rem;
+  margin-bottom: 3vh;
+}
+.section-Article{
+  width: 70%;
+}
+.testBtn{
+  padding: 10px 15px;
+  background-color: $dark-red;
+  color: $ghost;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.05rem;
+  &:hover{
+    background-color: lighten($dark-red, 10%);
+  }
 }
