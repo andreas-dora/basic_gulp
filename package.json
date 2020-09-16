@@ -1,0 +1,29 @@
+{
+  "name": "basic_gulp",
+  "version": "1.0.0",
+  "description": "Gulp Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreas-dora/basic_gulp.git"
+  },
+  "keywords": [
+    "Template",
+    "Gulp"
+  ],
+  "author": "Andreas Breitwieser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreas-dora/basic_gulp/issues"
+  },
+  "homepage": "https://github.com/andreas-dora/basic_gulp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
