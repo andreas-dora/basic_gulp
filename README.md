@@ -20,7 +20,7 @@ function style() {
   return gulp.src('./scss/**/*.scss')
   // Diese Datei durch den compiler schicken
     .pipe(sass())
-   // .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
   // Wo soll die CSS-Datei gespeichert werden  
     .pipe(gulp.dest('./css'))
   // Alle Änderungen Streamen  
