@@ -21,9 +21,18 @@ Folgende Dinge müssen installiert sein:
 npm install --save-dev gulp gulp-sass browser-sync
 
 npm install --save-dev gulp-imagemin
-
+```
 
 ```
 gulp-cli -g
 
 ```
+
+---
+ 
+## Achtung neue Branch: branch-1
+
+
+**Hinzugefügt:**
+
+``` --savee-dev gulp-sourcemaps gulp-postcss autoprefixer cssnano gulp-concat gulp-replace gulp-uglify```

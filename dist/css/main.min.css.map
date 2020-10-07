@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.sass","_var.sass"],"names":[],"mappings":"AAEA,KACE,aCDkB","file":"main.min.css","sourcesContent":["@import 'var';\n\nbody {\n  color: $col-bikini; }\n","$col-mainblau: #034f67;\n$col-hellgrau: #e6e1dc;\n$col-bikini: #77212e;\n$col-dunkel: #373434;\n"]}
