@@ -46,7 +46,7 @@ const serve = (done) => {
 // Compile sass into css with gulp
 const css = () => {
     // Find SASS
-    return gulp.src(`${src}/sass/**/*.sass`)
+    return gulp.src(`${src}/scss/**/*.scss`)
         // Init Plumber
         .pipe(plumber())
         // Lint SASS
@@ -132,7 +132,7 @@ const script = () => {
 };
 
 // Function to watch our Changes and refreash page
-const watch = () => gulp.watch([`${src}/*.html`, `${src}/js/**/*.js`, `${src}/sass/**/*.sass`], gulp.series(css, script, html, reload));
+const watch = () => gulp.watch([`${src}/*.html`, `${src}/js/**/*.js`, `${src}/scss/**/*.scss`], gulp.series(css, script, html, reload));
 
 // All Tasks for this Project
 const dev = gulp.series(css, script, html, serve, watch);
