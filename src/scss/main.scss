@@ -1,19 +1,172 @@
 @import 'var';
 
-*{
+*,
+*::before,
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: $col-mainblau;
-  font-family: Arial, Helvetica, sans-serif;
-  color: ghostwhite;
+body{
+  background-color: $col-background;
+  color: black;
+  font-family: 'Cairo', Arial, sans-serif;
   font-size: 100%;
 }
+@import 'typo';
+@import 'code';
 
 /*########################################## --- HEADER & NAV
 ############################################ 
 ############################################ */
 
+header{
+  line-height: 1;
+  min-height: 50vh;
+  background-color: #e6e1dc;
+}
+
+
+
+
+/*########################################## --- Section
+############################################ 
+############################################ */
+
+main{
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+section{
+  margin: 0 auto;
+  padding: 5vmax 0 3vmax 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px solid $col-dunkel;
+}
+
+
+.flexBox{
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flexReverse{
+  display: flex;
+  gap: 1em;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+
+.leftContent{
+  flex: 2;
+  min-width: 400px;
+}
+
+.sectionHead{
+  margin-bottom: 1em;
+}
+.sectionHead h1{
+  font-size: clamp(1.6em, 4vw, 6em);
+  line-height: 1;
+  margin-bottom: .2em;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.sectionHead h6{
+  font-size: 21px;
+  line-height: 1.4;
+  margin-bottom: .8em;
+}
+
+article {
+  margin: 0 0 0 auto;
+  padding: 0 .6em;
+    border: 1px solid $col-hellgrau;
+
+}
+
+aside {
+  flex: 1;
+  min-width: 200px;
+  padding: 0 .4em;
+  border: 1px solid $col-hellgrau;
+}
+.codeContainer{
+  padding: 0 .6em;
+  border: 1px solid $col-hellgrau;
+
+}
+/*########################################## --- Bilder
+############################################ 
+############################################ */
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+figcaption{
+  font-size: 16px;
+}
+
+/*########################################## --- Footer
+############################################ 
+############################################ */
+
+
+footer{
+  background-color: $col-accent;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10vh;
+}
+footer a{
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.wrapper{
+  width: 96%;
+  padding: 3vw .5em; 
+  margin: 0 auto;
+  text-align: right;
+}
+
+@media (min-width: 700px){
+  .flexBox,
+  .flexReverse {
+    gap: 2em;
+  }
+}
+
+
+@media (min-width: 1081px){
+  body{
+    font-size: 115%;
+  }
+  section{
+    width: 96%;
+    min-height: 100vh;
+    gap: 2em;
+  }
+  .flexBox,
+  .flexReverse {
+    gap: 2.5em;
+  }
+  .leftContent {
+    max-width: 62%;
+  }
+  article {
+    width: 90%;
+  }
+  aside {
+    max-width: 37%;
+  }
+}

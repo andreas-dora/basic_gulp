@@ -6,11 +6,25 @@ $col-chili: #9B2335;
 $col-alarm: #f9423a;
 $col-bronze: #a6966c;
 
+$col-background: #f8f8ff;;
 $col-hilite: #f9423a;
 $col-medium:#a6966c;
+$col-accent: #034f67;
 
+
+$col-string:#ff6347;
+$col-object: #adff2f;
+$col-variable: #1e90ff;
+$col-dataType: #6197c4;
+$col-number: #6b7e7d;
+$col-comment: #178117;
+$col-text: #fffafa;
+$col-function: #ffd700;
 
 @mixin upper(){
   text-transform: uppercase;
   letter-spacing: 0.12em;
 }
+
+
+        
