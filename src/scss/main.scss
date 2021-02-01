@@ -52,13 +52,13 @@ section{
 
 .flexBox{
   display: flex;
-  gap: 1em;
+  gap: .8em;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .flexReverse{
   display: flex;
-  gap: 1em;
+  gap: .8em;
   flex-direction: row-reverse;
   flex-wrap: wrap;
 }
@@ -98,11 +98,7 @@ aside {
   padding: 0 .4em;
   border: 1px solid $col-hellgrau;
 }
-.codeContainer{
-  padding: 0 .6em;
-  border: 1px solid $col-hellgrau;
 
-}
 /*########################################## --- Bilder
 ############################################ 
 ############################################ */
@@ -113,6 +109,7 @@ img{
 }
 figcaption{
   font-size: 16px;
+  line-height: 1.4;
 }
 
 /*########################################## --- Footer
@@ -121,7 +118,7 @@ figcaption{
 
 
 footer{
-  background-color: $col-accent;
+  background-color: $col-dunkel;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 10vh;
@@ -132,14 +129,29 @@ footer a{
   text-transform: uppercase;
   color: whitesmoke;
 }
+footer a:hover{
+  color: $col-hilite;
+}
 .wrapper{
   width: 96%;
-  padding: 3vw .5em; 
+  padding: 4vw .5em 3vw .5em; 
   margin: 0 auto;
   text-align: right;
 }
 
-@media (min-width: 700px){
+/*########################################## --- MEDIA
+############################################ 
+############################################ */
+
+@media only screen and (min-width: 768px){
+  .flexBox,
+  .flexReverse {
+    gap: 1em;
+  }
+}
+
+
+@media only screen and (min-width: 992px){
   .flexBox,
   .flexReverse {
     gap: 2em;
@@ -170,3 +182,24 @@ footer a{
     max-width: 37%;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  body{
+    font-size: 130%;
+  }
+}
+
+
+// @media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}

@@ -224,7 +224,11 @@
     <div class="wrapper">
       <p>&copy; 2021 Andreas Breitwierser</span> | <a href="#">Impressum</a></p>
     </div>
-    
+    <sub id="id_lastMod">Letzte Änderung:</sub>
   </footer>
+  <script>
+    lastMod = document.querySelector('#id_lastMod');
+    lastMod.innerText = document.lastModified;
+  </script>
 </body>
 </html>
