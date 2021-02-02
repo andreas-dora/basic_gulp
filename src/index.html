@@ -176,7 +176,9 @@
         <div class="flexReverse">
           <aside>
             <h3>Codeblöcke</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis repellat ipsam harum quae dolorem! Sed tempore placeat tempora odit veniam sequi. Adipisci ipsam alias aspernatur numquam, illum aut dolorum!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis <a href="#" class="aFancy">Fancy Link</a> ipsam harum quae dolorem! Sed tempore placeat tempora odit veniam sequi. Adipisci ipsam alias aspernatur numquam, illum aut dolorum!</p>
+            <button class="myBtn">Test</button>
+            <button class="myBtn">Copy</button>
           </aside>
           <div class="leftContent">
             <div class="codeContainer">
@@ -227,8 +229,9 @@
     <sub id="id_lastMod">Letzte Änderung:</sub>
   </footer>
   <script>
-    lastMod = document.querySelector('#id_lastMod');
-    lastMod.innerText = document.lastModified;
+    const modFeld = document.querySelector('#id_lastMod');
+    // const lastMod = 
+    modFeld.innerText = document.lastModified;
   </script>
 </body>
 </html>

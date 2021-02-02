@@ -1,0 +1,53 @@
+button{
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  overflow: hidden;
+  display: block;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+.myBtn {
+  width: 120px;
+  height: 38px;
+  margin-bottom: 20px;
+  background-color: $col-hellgrau;
+  border: none;
+  outline: 3px solid $col-dunkel;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.myBtn:hover,
+.myBtn:focus{
+  color: $col-myGreen;
+  outline: 3px solid $col-myGreen;
+  box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  cursor: pointer;
+}
+.aFancy{
+  font-weight: bold;
+  color: $col-mainblau;
+  background-image: -webkit-gradient(linear, left top, left bottom, 
+  from($col-mainblau), to($col-myGreen));
+  background-image: linear-gradient($col-mainblau, $col-myGreen);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 2px;
+  -webkit-transition: background-size 500ms ease-in-out;
+  transition: background-size 400ms ease-in-out;
+}
+.aFancy:hover{
+  background-size: 100% 2px;
+
+}
