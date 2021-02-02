@@ -19,10 +19,12 @@ button:focus {
   background-color: $col-hellgrau;
   border: none;
   outline: 3px solid $col-dunkel;
+  transition: 0.3s; 
   box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .myBtn:hover,
 .myBtn:focus{
+  background-color: #cbc4be;
   color: $col-myGreen;
   outline: 3px solid $col-myGreen;
   box-shadow: inset 0 5px 6px rgba(0, 0, 0, 0.4);
