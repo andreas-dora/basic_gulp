@@ -18,7 +18,7 @@ h3{
   text-align: right;
   font-size: 1.8em;
   line-height: 1;
-  margin-bottom: .4em;
+  margin-bottom: 1em;
   border-bottom: 4px solid $col-dunkel;
 }
 p,
@@ -77,6 +77,25 @@ h6 {
   color: $col-hilite;
 }
 
+
+ul {
+  font-size: 17px;
+  margin-bottom: 1em;
+}
+li {
+  margin-left: 1.4em;
+  line-height: 1.6;
+}
+
+.taste{
+  font-size: small;
+  font-weight: bold;
+  background-color: $col-hellgrau;
+  letter-spacing: 0.08em;
+  padding: .03em .6em;
+  border: 1px solid $col-dunkel;
+  border-radius: 6%;
+}
 
 .code__text{
   color:$col-text;
