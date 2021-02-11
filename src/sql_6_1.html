@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL Grundlagen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <header>
+    <h1>mySQL</h1>
+    <h1>Basics</h1>
+  </header>
+  <main>
+
+
+
+
+    <section>
+      <div>
+        <div class="sectionHead">
+          <h1 class="sectionHead">Datenbanken modelieren</h1>
+        </div>
+        <div class="flexBox">
+          <div class="leftContent">
+            <article>
+                <p>Bevor man beginnt einen Datenbank oder eine Tabelle zu erstellen, ist zuerst möglichst genau darzustellen welche Informationen die DB verwalten soll. Hat man sich diese Übersicht verschafft kann man beginnen ein erstes Modell der zu konstruieren, das die Verbindungen genauer hervorhebt.</p>
+                <h4>Anforderungen zusammenfassen</h4>
+                <p>Das Beispiel von Michael Laube geht von folgendem aus:</p>
+
+
+<ul>
+<li>Ausbildungsberufe</li>
+<li>Auszubildende</li>
+<li>Adressen der Auszubildenden</li>
+<li>Ausbilder</li>
+<li>Ausbildungsfächer</li>
+<li>Ausbildungsstandorte</li>
+<li>Praxisseminare</li>
+<li>Vermittlung theoretischer Inhalte</li>
+</ul>
+
+<hr />
+
+<h4>Entity-Relationship Model</h4>
+
+<p>Entitäten sollten aus dem Anforderungskatalog hervorgehen.</p>
+
+<h4>Notation</h4>
+
+<p>Die Entity-Relationship Notation als einheitlichen unmissverständliche Schreibweise.
+<strong>Objekte</strong> (Entitäten) werden in Rechtecken dargestellt.
+<strong>Attribute</strong> (Eigenschaften) werden in Ellipsen dargestellt.</p>
+
+<h4>Schlüsselattribute</h4>
+
+<p>In einem Unternehmen kann es schnell Vorkommen, dass zwei Mitarbeiter mit gleichen Vor- und Nachnamen auftauchen.
+ Besser ist es, eine eindeutige Kunden-, Mitarbeiter-, oder in diesem Fall Azubi ID zu vergeben.
+ Im Modell werden Schlüsselattribute mit einer <strong>#</strong> gekennzeichnet.</p>
+
+<hr />
+
+<h4>Optionale und Pflichtattribute</h4>
+
+<p>Pflichtattribute werden im Modell mit (P) gekennzeichnet.
+Optionale Attribute werden mit (O) gekennzeichnet.</p>
+
+<p>Pflichtattribute sind in den Datensätzen dann <strong>NOT NULL</strong>.</p>
+
+<hr />
+
+<h4>Datentyp zuweisen</h4>
+
+<p>Zu guter Letzt sollte den Attributen noch ein möglichst Ressourcen schonender Datentyp zugeordnet werden:</p>
+
+<table>
+<colgroup>
+<col/>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th> Attribut </th>
+	<th>Wertebereich </th>
+	<th>Datentyp</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td>ausid</td>
+	<td>0&#8211;255</td>
+	<td>SMALLINT</td>
+</tr>
+<tr>
+	<td>name</td>
+	<td>0 bis 120 Zeichen</td>
+	<td>CHAR(120)</td>
+</tr>
+<tr>
+	<td>nachname</td>
+	<td>0 bis 120 Zeichen</td>
+	<td>CHAR(120)</td>
+</tr>
+<tr>
+	<td>geburtsdatum</td>
+	<td>1.1.1900 bis 31.12.2050</td>
+	<td>DATE</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<table>
+<colgroup>
+<col/>
+<col/>
+<col/>
+<col/>
+</colgroup>
+
+<thead>
+<tr>
+	<th> ausid#</th>
+	<th>name (P)</th>
+	<th>vorname (P)</th>
+	<th>geburtsdatum (O)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td> 1</td>
+	<td>Kelkoff  </td>
+	<td>Anita  </td>
+	<td>21.12.1996</td>
+</tr>
+<tr>
+	<td> 2</td>
+	<td>Sukowa</td>
+	<td>Angeline</td>
+	<td>02.07.1998</td>
+</tr>
+<tr>
+	<td>3</td>
+	<td>Alberta</td>
+	<td>Andromeda</td>
+	<td>10.07.2000</td>
+</tr>
+<tr>
+	<td>4</td>
+	<td>Arkansas</td>
+	<td>Achim</td>
+	<td>14.09.1999</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+                  </article>
+                </div>
+                <aside>
+                  <figure>
+                    <img src="./img/lunQuad.jpg" alt="Offenbach Marktplatz">
+                    <figcaption>Die Satdt lebt: 24 Stunden in Offenbach machen müde 
+                      Bayern bunter.</figcaption>
+                    </figure>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </section> 
+
+
+
+
+    <section>
+      <div>
+        <div class="sectionHead">  
+          <h1 class="sectionHead">Some Great Reverse</h1>
+´        </div>
+        <div class="flexReverse">
+          <aside>
+            <figure>
+              <img src="./img/lunQuad.jpg" alt="">
+              <figcaption>Die Satdt lebt: 24 Stunden in Offenbach machen müde Bayern bunter.</figcaption>
+            </figure>
+          </aside>
+          <div class="leftContent">
+                <article>                
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Repudiandae rem magni beatae assumenda tempore in dignissimos fuga 
+                    iusto, nostrum totam porro, voluptatibus inventore ratione 
+                    praesentium aperiam culpa tenetur blanditiis! Exercitationem.</p>
+                    <ul>
+               <li>Angeforderte Stelle</li>
+               <li>Funktion der Anfrage</li>
+               <li>Datum der Fertigstellung</li>
+               <li>Durchführung von Änderungen und GRund der Änderung</li>
+               <li>Autor</li>
+             </ul>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas similique odio, qui architecto fugit sequi quae soluta ullam facere magnam?
+
+             </p>
+             <ul>
+              <li>Mit <span class="taste">cmd</span> &plus; <span class="taste">T</span> eine neue Skriptdatei ereugen.</li>
+              <li>Folgende Eingabe: <code>SELECT name,vorname FROM mitarbeiter;</code></li>
+              <li>Ausführen mit dem Blitzsymbol oder <span class="taste">CMD</span> &plus; <span class="taste">ENTER</span> </li>
+            </ul>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, quam similique nihil 
+                  omnis aliquid earum rerum dicta quod necessitatibus inventore ad itaque animi? Natus, quos? 
+                  reprehenderit sunt ad rerum dignissimos atque minus impedit architecto, earum nostrum fuga 
+                  aperiam porro natus, quaerat, culpa debitis repellendus? 
+                  <a href="#" class="more">Mehr <span class="more__1">></span>
+                    <span class="more__2">></span><span class="more__3">></span></a></p>            
+              </article>
+          </div>
+      </div>     
+        </div>
+      </div>
+    </section> 
+
+
+
+    <section>
+      <div>
+        <div class="sectionHead">  
+          <h1 class="sectionHead">Some Great Reverse</h1>
+´        </div>
+        <div class="flexReverse">
+          <aside>
+            <h3>Codeblöcke</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis <a href="#" class="aFancy">Fancy Link</a> ipsam harum quae dolorem! Sed tempore placeat tempora odit veniam sequi. Adipisci ipsam alias aspernatur numquam, illum aut dolorum!</p>
+            <button class="myBtn">Test</button>
+            <button class="myBtn">Copy</button>
+          </aside>
+          <div class="leftContent">
+            <div class="codeContainer">
+              <pre>
+                <code>    
+
+</code>
+</pre>
+            </div>
+   
+          </div>
+      </div>     
+    </div>
+</div>
+    </section> 
+
+  </main>
+  <footer>
+    <div class="wrapper">
+      <span class="right"><span class="thin">&copy; 2021 Andreas Breitwieser | Letzte Aktualisierung: <span id="id_lastMod"></span> | </span><a href="#">Impressum</a></span>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>   
