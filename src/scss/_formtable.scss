@@ -9,7 +9,9 @@
     padding: .4em;
   }
   label{
-    text-align: right;
+    font-weight: 600;
+    padding-left: .6em;
+
   }
   input{
     height: 38px;
@@ -17,6 +19,12 @@
     padding-left: 0.4em;
   }
   .longInput{
-    width: 450px;
+    width: 100%;
+  }
+  .mediumInput{
+    width: 400px;
+  }
+  .smallInput{
+    width: 90px;
   }
 }
