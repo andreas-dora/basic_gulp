@@ -1,0 +1,22 @@
+.fTable{
+  background-color:lavender;
+  border-collapse: collapse;
+  th{
+    padding: .4em;
+    text-align: right;
+  }
+  td{
+    padding: .4em;
+  }
+  label{
+    text-align: right;
+  }
+  input{
+    height: 38px;
+    font-size: 20px;
+    padding-left: 0.4em;
+  }
+  .longInput{
+    width: 450px;
+  }
+}
